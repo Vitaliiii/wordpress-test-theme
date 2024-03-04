@@ -278,6 +278,7 @@ function books_rating_ajax() {
 	wp_send_json($rating);
 }
 add_action('wp_ajax_books_rating_ajax', 'books_rating_ajax');
+add_action('wp_ajax_nopriv_books_rating_ajax', 'books_rating_ajax');
 
 function display_rating($post_id) {
     
